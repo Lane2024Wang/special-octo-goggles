@@ -3,305 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flower Map</title>
-    <link rel="stylesheet" href="style.css">
+    <title>矩形交互</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
-    <div class="flower-container"> 
-
-
-                  <center> 
-                    <p>enter name:</p>        
-                        <input id="myInput" value=>
-                        <button>
-                        <a href="">
-                            <button class="GFG">
-                                welcome to
-                            </button>
-                    </form>   </center>
-
-<script>
-var input = document.getElementById("myInput");
-input.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("myBtn").click();
-  }
-});
-</script>
-
-           
-            <br>    
-            
-        <!-- Flower Center -->
-        <div class="flower-center"></div>
-
-        <center> 
-             <h1>We Matter Too</h1>
-        </center>
-
-                            <div id="container"></div>
-    <script>
-
-         <center> 
-             <h3>MIgration Reasons</h3>
-
-             <ul class="legend">
-             <li> Education</li>
-        </center>
-
-                            <div id="container"></div>
-
-             
-    <script>
-
-
-        
-
-anychart.onDocumentReady(function () {
-  
-  // add data
-  const data = [
-
-  
-
-
-           //states within south sudan 
-          {from: "Jonglei ", to: "Refugees", value: 243989},
-          {from: "Jonglei ", to: "Returnees", value: 19227},
-          {from: "Jonglei ", to: "IDP", value: 243989},
-
-          {from: "Western Equatoria", to: "Refugees", value: 68624},
-          {from: "Western Equatoria", to: "Returnees", value: 68624},
-          {from: "Western Equatoria", to: "IDP", value: 68624},
-
-          {from: "Central Equatoria", to: "Refugees", value: 25141},
-          {from: "Central Equatoria", to: "Returnees", value: 234636},
-          {from: "Central Equatoria", to: "IDP", value: 234636},
-
-          {from: "Eastern Equatoria", to: "Refugees", value: 49511},
-          {from: "Eastern Equatoria", to: "Returnees", value: 49511},
-          {from: "Eastern Equatoria", to: "IDP", value: 49511},
-
-          {from: "Unity", to: "Refugees", value: 196666},
-          {from: "Unity", to: "Returnees", value: 196666},
-          {from: "Unity", to: "IDP", value: 196666},
-
-          {from: "Upper Nile ", to: "Refugees", value: 139959},
-          {from: "Upper Nile ", to: "Returnees", value: 349422},
-          {from: "Upper Nile ", to: "IDP", value: 219012},
-
-
-          {from: "Lakes", to: "Refugees", value: 120},
-          {from: "Lakes", to: "Returnees", value: 186983},
-          {from: "Lakes", to: "IDP", value: 186983},
-
-          {from: "Warrap", to: "Refugees", value: 258},
-          {from: "Warrap", to: "Returnees", value: 12578},
-          {from: "Warrap", to: "IDP", value: 287355},
-
-          {from: "Western Bahr el Ghazal", to: "Refugees", value: 3493},
-          {from: "Western Bahr el Ghazal", to: "Returnees", value: 30095},
-          {from: "Western Bahr el Ghazal", to: "IDP", value: 64096},
-
-          {from: "Northen Bahr el Ghazal", to: "Refugees", value: 9159},
-          {from: "Northen Bahr el Ghazal", to: "Returnees", value: 54188},
-          {from: "Northen Bahr el Ghazal", to: "IDP", value: 64893},
-
-
-          //capital cities
-
-          {from: "Bor", to:  "Refugees", value: 2448480},
-          {from: "Bor", to: "Returnees", value: 38403},
-          {from: "Bor", to: "IDP", value: 98057},
-
-          {from: "Yambio", to: " Refugees", value: 15681},
-          {from: "Yambio", to: "Returnees", value: 17050},
-          {from: "Yambio", to: "IDP", value: 85305},
-
-          {from: "Juba", to: "Refugees", value: 25141},
-          {from: "Juba", to: "Returnees", value: 333538},
-          {from: "Juba", to: "IDP", value: 301538},
-
-          
-          {from: "Torit", to: "Returnees", value: 124096},
-          {from: "Torit", to: "IDP", value: 96327},
-
-          {from: "Bentiu", to: "Refugees", value: 127654},
-          {from: "Bentiu", to: "Returnees", value: 156219},
-          {from: "Bentiu", to: "IDP", value: 464393},
-
-          {from: "Malakal", to: "Refugees", value: 230541},
-          {from: "Malakal", to: "Returnees", value: 603498},
-          {from: "Malakal", to: "IDP", value: 249684},
-
-          {from: "Rumbek", to: "Refugees", value: 382},
-          {from: "Rumbek", to: "IDP", value: 169678},
-
-          {from: "Kuacjok", to: "Refugees", value: 20010},
-          {from: "Kuacjok", to: "IDP", value: 140920},
-
-          {from: "Wau", to: "Returnees", value: 45819},
-          {from: "Wau", to: "IDP", value: 29428},
-
-          {from: "Aweil", to: "Refugees", value: 13192},
-          {from: "Aweil", to: "Returnees", value: 59586},
-          {from: "Aweil", to: "IDP", value: 32023},
-
-           //types of population groups 
-          
-          
-
-           //gender 
-           
-          
-
-
-          //types of population groups 
-         
-
-        ];
-  // create a sankey diagram instance
-  let chart = anychart.sankey();
-
-  // load the data to the sankey diagram instance
-  chart.data(data);
-
-  // set the chart's padding
-  chart.padding(20, 40);
-
-  // configure a custom color palette
-  chart.palette([
-    "#f5dc50",
-    "#e1a03c",
-    "#c87d5a",
-    "#fff0c8",
-    "#aa96b4",
-    "#6e5a7d",
-    "#e19196",
-    "#419bd2",
-    "#46afaa",
-    "#5a5050"
-  ]);
-
-  // customize the nodes:
-  // set the width
-  chart.nodeWidth("40%");
-  // set the padding
-  chart.nodePadding(30);
-  // customize the labels
-  chart.node().normal().labels().fontSize(14);
-  chart.node().labels().useHtml(true);
-  chart
-    .node()
-    .labels()
-    .format("<span style='font-weight:bold'>{%name}</span><br>{%value}");
-
-  // customize the links
-  chart.flow({
-    normal: {
-      fill: function () {
-        return anychart.color.lighten(this.sourceColor, 0.5) + " " + 0.3;
-      }
-    },
-    hovered: {
-      fill: function () {
-        return this.sourceColor + " " + 0.8;
-      }
-    }
-  });
-
-  // add a title and customize it
-  chart
-    .title()
-    .enabled(true)
-    .useHtml(true)
-    .text(
-      '<span style = "color: #2b2b2b; font-size:20px;">Migration Patterns</span>' +
-        '<br/><span style="color:#00bfa5; font-size: 16px;">(South Sudan)</span>'
-    );
-
-  // set the chart container id
-  chart.container("container");
-
-  // draw the chart
-  chart.draw();
-
-});
-</script>
-</body>
-
-       
-        <!-- Flower Petals -->
-        <div class="petal petal-1"></div>
-        <div class="petal petal-2"></div>
-        <div class="petal petal-3"></div>
-        <div class="petal petal-4"></div>
-        <div class="petal petal-5"></div>
-        <div class="petal petal-6"></div>
-
-        <!-- Flower Stem -->
-        <div class="flower-stem"></div>
-
-        <!-- Flower Leaves -->
-        <div class="flower-leaf leaf-left"></div>
-        <div class="flower-leaf leaf-right"></div>
-    </div>
-
-   <h1>Migration Reasons</h1> 
-
-   <a href=">
-
-        <img src="">
-       <img src="">
-       <img src="">
-
-        <button class="GFG">
-
-            <script>
-
-         <center> 
-             <h3>MIgration Reasons</h3>
-
-             <ul class="legend">
-             <li> Education</li>
-              <li> Economic</li>
-              <li> Healthcare</li>
-              <li> Family related travel</li>
-              <li> Return from voluntary travel</li>
-             <li> conflict displacement</li>
-              <li> Food insecurity</li>
-              <li> Disaster displacemnet</li>
-             </ul>
-        </center>
-
-                            <div id="container"></div>
-
-                 <h3>MIgration Reasons</h3>
-
-             <ul class="legend">
-             <li> Education</li>
-              <li> Economic</li>
-              <li> Healthcare</li>
-              <li> Family related travel</li>
-              <li> Return from voluntary travel</li>
-             <li> conflict displacement</li>
-              <li> Food insecurity</li>
-              <li> Disaster displacemnet</li>
-             </ul>
-
-             
-            </script>
-
-
-
-            
+    <h1>Demographic Flow in South Sudan (01/2022 - 10/2022)</h1>
+
+    <div class="container">
+        <div class="axis">
+            <div class="axis-title">Population</div>
+            <div class="label label-25000">25000</div>
+            <div class="label label-20000">20000</div>
+            <div class="label label-15000">15000</div>
+            <div class="label label-10000">15000</div>
+            <div class="label label-5000">5000</div>
+            <div class="label label-0">0</div>
         </div>
 
-    
-   
+        <!-- 添加 data-month 属性，值为月份 -->
+        <div class="rectangle" data-id="1" data-month="01-2022"></div>
+        <div class="rectangle" data-id="2" data-month="02-2022"></div>
+        <div class="rectangle" data-id="3" data-month="03-2022"></div>
+        <div class="rectangle" data-id="4" data-month="04-2022"></div>
+        <div class="rectangle" data-id="5" data-month="05-2022"></div>
+        <div class="rectangle" data-id="6" data-month="06-2022"></div>
+        <div class="rectangle" data-id="7" data-month="07-2022"></div>
+        <div class="rectangle" data-id="8" data-month="08-2022"></div>
+        <div class="rectangle" data-id="9" data-month="09-2022"></div>
+        <div class="rectangle" data-id="10" data-month="10-2022"></div>
 
+    </div>
+    
 
     <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </body>
 </html>
